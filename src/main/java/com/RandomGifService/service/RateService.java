@@ -1,7 +1,7 @@
-package alfa.alfabanktesttask.service;
+package com.RandomGifService.service;
 
-import alfa.alfabanktesttask.clients.RateClient;
-import alfa.alfabanktesttask.dto.Rate;
+import com.RandomGifService.clients.RateClient;
+import com.RandomGifService.dto.Rate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

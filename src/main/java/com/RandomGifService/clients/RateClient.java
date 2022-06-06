@@ -1,6 +1,6 @@
-package alfa.alfabanktesttask.clients;
+package com.RandomGifService.clients;
 
-import alfa.alfabanktesttask.dto.Rate;
+import com.RandomGifService.dto.Rate;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

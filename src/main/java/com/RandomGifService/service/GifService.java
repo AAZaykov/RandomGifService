@@ -1,6 +1,6 @@
-package alfa.alfabanktesttask.service;
+package com.RandomGifService.service;
 
-import alfa.alfabanktesttask.clients.GifClient;
+import com.RandomGifService.clients.GifClient;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;

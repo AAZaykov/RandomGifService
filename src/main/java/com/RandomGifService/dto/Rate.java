@@ -1,4 +1,4 @@
-package alfa.alfabanktesttask.dto;
+package com.RandomGifService.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
