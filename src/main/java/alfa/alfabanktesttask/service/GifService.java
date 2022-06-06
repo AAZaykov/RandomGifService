@@ -1,7 +1,6 @@
 package alfa.alfabanktesttask.service;
 
 import alfa.alfabanktesttask.clients.GifClient;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,7 @@ public class GifService {
     @Value("${giphy.api_key}")
     private String apiKey;
 
-    @Value("${curr}")
+    @Value("${currency}")
     private String curr;
 
     @Autowired
@@ -27,14 +26,14 @@ public class GifService {
         this.gifClient = gifClient;
     }
 
-    public String getGifUrl(String currency) {
+    public String getGifUrl() {
         if (rateService.getLatestRates().getRates().get(curr) > rateService.getHistoryRates().getRates().get(curr)){
             return getURL(gifClient.getGifJson(apiKey, "rich"));
         }else return getURL(gifClient.getGifJson(apiKey, "broke"));
     }
 
     @SneakyThrows
-    private String getURL(String gifJson){
+    String getURL(String gifJson){
         return new ObjectMapper().readTree(gifJson).path("data").path("images").path("original").path("url").asText();
     }
 }

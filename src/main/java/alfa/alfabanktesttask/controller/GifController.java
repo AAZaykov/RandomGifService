@@ -12,7 +12,7 @@ public class GifController{
 
     private GifService gifService;
 
-    @Value("${curr}")
+    @Value("${currency}")
     private String currency;
 
     @Autowired
@@ -22,6 +22,6 @@ public class GifController{
 
     @GetMapping("/result")
     public RedirectView getGif(){
-        return new RedirectView(gifService.getGifUrl(currency));
+        return new RedirectView(gifService.getGifUrl());
     }
 }

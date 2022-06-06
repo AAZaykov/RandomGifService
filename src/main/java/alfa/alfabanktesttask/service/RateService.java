@@ -23,13 +23,11 @@ public class RateService {
     private String appId;
 
     public Rate getLatestRates() {
-        Rate latestRates = rateClient.getLatestRates(appId);
-        return latestRates;
+        return rateClient.getLatestRates(appId);
     }
 
     public Rate getHistoryRates(){
-        Rate historyRates = rateClient.getHistoryRates(LocalDate.now().minusDays(1).format(DateTimeFormatter.ISO_LOCAL_DATE), appId);
-        return historyRates;
+        return rateClient.getHistoryRates(LocalDate.now().minusDays(1).format(DateTimeFormatter.ISO_LOCAL_DATE), appId);
     }
 
 }
